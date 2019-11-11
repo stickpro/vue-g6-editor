@@ -1,6 +1,6 @@
 {
   "name": "vue-g6-editor",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "description": "基于vue的G6-Editor基础流程图",
   "author": "liyucan <1206497655@qq.com>",
