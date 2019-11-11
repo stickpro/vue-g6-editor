@@ -5,72 +5,72 @@
         <i
           data-command="undo"
           class="command iconfont icon-undo"
-          title="撤销"
+          title="undo"
         ></i>
         <i
           data-command="redo"
           class="command iconfont icon-redo disable"
-          title="重做"
+          title="redo"
         ></i>
         <span class="separator"></span>
         <i
           data-command="copy"
           class="command iconfont icon-copy-o"
-          title="复制"
+          title="copy"
         ></i>
         <i
           data-command="paste"
           class="command iconfont icon-paster-o disable"
-          title="粘贴"
+          title="paste"
         ></i>
         <i
           data-command="delete"
           class="command iconfont icon-delete-o"
-          title="删除"
+          title="delete"
         ></i>
         <span class="separator"></span>
         <i
           data-command="zoomIn"
           class="command iconfont icon-zoom-in-o"
-          title="放大"
+          title="zoomIn"
         ></i>
         <i
           data-command="zoomOut"
           class="command iconfont icon-zoom-out-o"
-          title="缩小"
+          title="zoomOut"
         ></i>
         <i
           data-command="autoZoom"
           class="command iconfont icon-fit"
-          title="适应画布"
+          title="autoZoom"
         ></i>
         <i
           data-command="resetZoom"
           class="command iconfont icon-actual-size-o"
-          title="实际尺寸"
+          title="resetZoom"
         ></i>
         <span class="separator"></span>
         <i
           data-command="toBack"
           class="command iconfont icon-to-back"
-          title="层级后置"
+          title="toBack"
         ></i>
         <i
           data-command="toFront"
           class="command iconfont icon-to-front"
-          title="层级前置"
+          title="toFront"
         ></i>
         <span class="separator"></span>
         <i
           data-command="multiSelect"
           class="command iconfont icon-select"
-          title="多选"
+          title="multiSelect"
         ></i>
         <!-- <i data-command="addGroup" class="command iconfont icon-group disable" title="成组"></i>
         <i data-command="unGroup" class="command iconfont icon-ungroup disable" title="解组"></i> -->
       </div>
       <div class="data-opt">
-        <el-button size="mini" type="primary" @click="saveFlow">保存</el-button>
+        <el-button size="mini" type="primary" @click="saveFlow">saveFlow</el-button>
         <!-- <el-button size="mini" type="primary" @click="downloadFlow">下载</el-button> -->
       </div>
     </div>
@@ -128,32 +128,32 @@
         >
           <div data-status="node-selected" class="menu" style="display: none;">
             <div data-command="copy" class="command disable">
-              <span>复制</span>
-              <!-- <span>copy</span> -->
+              <!-- <span>复制</span> -->
+              <span>copy</span>
             </div>
             <div data-command="delete" class="command disable">
-              <span>删除</span>
-              <!-- <span>delete</span> -->
+              <!-- <span>删除</span> -->
+              <span>delete</span>
             </div>
           </div>
           <div data-status="edge-selected" class="menu" style="display: none;">
             <div data-command="delete" class="command disable">
-              <span>删除</span>
-              <!-- <span>delete</span> -->
+              <!-- <span>删除</span> -->
+              <span>delete</span>
             </div>
           </div>
           <div data-status="group-selected" class="menu" style="display: none;">
             <div data-command="copy" class="command disable">
-              <span>复制</span>
-              <!-- <span>copy</span> -->
+              <!-- <span>复制</span> -->
+              <span>copy</span>
             </div>
             <div data-command="delete" class="command disable">
-              <span>删除</span>
-              <!-- <span>delete</span> -->
+              <!-- <span>删除</span> -->
+              <span>delete</span>
             </div>
             <div data-command="unGroup" class="command disable">
-              <span>解组</span>
-              <!-- <span>unGroup</span> -->
+              <!-- <span>解组</span> -->
+              <span>unGroup</span>
             </div>
           </div>
           <div
@@ -162,34 +162,34 @@
             style="display: block;"
           >
             <div data-command="undo" class="command disable">
-              <span>撤销</span>
-              <!-- <span>undo</span> -->
+              <!-- <span>撤销</span> -->
+              <span>undo</span>
             </div>
             <div data-command="redo" class="command disable">
-              <span>重做</span>
-              <!-- <span>redo</span> -->
+              <!-- <span>重做</span> -->
+              <span>redo</span>
             </div>
             <div data-command="pasteHere" class="command disable">
-              <span>粘贴</span>
-              <!-- <span>pasteHere</span> -->
+              <!-- <span>粘贴</span> -->
+              <span>pasteHere</span>
             </div>
           </div>
           <div data-status="multi-selected" class="menu" style="display: none;">
             <div data-command="copy" class="command disable">
-              <span>复制</span>
-              <!-- <span>copy</span> -->
+              <!-- <span>复制</span> -->
+              <span>copy</span>
             </div>
             <div data-command="paste" class="command disable">
-              <span>粘贴</span>
-              <!-- <span>paste</span> -->
+              <!-- <span>粘贴</span> -->
+              <span>paste</span>
             </div>
             <!-- <div data-command="addGroup" class="command disable">
               <span>归组</span>
               <span>addGroup</span>
             </div> -->
             <div data-command="delete" class="command disable">
-              <span>删除</span>
-              <!-- <span>delete</span> -->
+              <!-- <span>删除</span> -->
+              <span>delete</span>
             </div>
           </div>
         </div>
@@ -202,19 +202,19 @@
               class="pannel"
               style="display: none;"
             >
-              <div class="pannel-title">节点</div>
+              <div class="pannel-title">Node</div>
               <div class="block-container">
                 <div class="p name">
-                  名称：
+                  Name：
                   <el-input size="mini" v-model="nodeName"></el-input>
                 </div>
                 <div class="p size">
-                  尺寸：
+                  Size :
                   <el-input size="mini" v-model="nodeWidth"></el-input>
                   <el-input size="mini" v-model="nodeHeight"></el-input>
                 </div>
                 <div class="p color">
-                  颜色：
+                  Color：
                   <el-color-picker
                     v-model="nodeColor"
                     size="mini"
@@ -228,10 +228,10 @@
               id="edge_detailpannel"
               style="display: none;"
             >
-              <div class="pannel-title">边</div>
+              <div class="pannel-title">Side</div>
               <div class="block-container">
                 <div class="p name">
-                  名称：
+                  Name：
                   <el-input size="mini" v-model="edgeName"></el-input>
                 </div>
               </div>
@@ -245,11 +245,11 @@
               <div class="pannel-title">组</div>
               <div class="block-container">
                 <div class="p name">
-                  名称：
+                  Name :
                   <el-input size="mini" v-model="groupName"></el-input>
                 </div>
                 <div class="p color">
-                  颜色：
+                  Color：
                   <el-color-picker
                     v-model="groupColor"
                     size="mini"
@@ -263,9 +263,9 @@
               id="canvas_detailpannel"
               style="display: none;"
             >
-              <div class="pannel-title">画布</div>
+              <div class="pannel-title">Canvas</div>
               <div class="block-container">
-                <el-checkbox v-model="gridCheck">网格对齐</el-checkbox>
+                <el-checkbox v-model="gridCheck">Grid alignment</el-checkbox>
               </div>
             </div>
             <div
@@ -274,10 +274,10 @@
               id="multi_detailpannel"
               style="display: block;"
             >
-              <div class="pannel-title">多选</div>
+              <div class="pannel-title">Multiple selection</div>
               <div class="block-container">
                 <div class="p color">
-                  颜色：
+                  Color：
                   <el-color-picker
                     v-model="multiColor"
                     size="mini"
@@ -288,7 +288,7 @@
           </div>
         </div>
         <div class="navigator">
-          <span class="pannel-title">导航器</span>
+          <span class="pannel-title">Minimap</span>
           <div class="mini-map" ref="minimap"></div>
         </div>
         <div class="zoom-slider">
